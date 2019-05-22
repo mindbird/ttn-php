@@ -1,6 +1,7 @@
 {
     "name": "mindbird/ttn-php",
     "type": "library",
+    "license": "LGPL-3.0",
     "description": "Simple PHP wrapper for messages from The Things Network http integration.",
     "authors": [
         {
