@@ -1,0 +1,17 @@
+{
+    "name": "mindbird/ttn-php",
+    "type": "library",
+    "description": "Simple PHP wrapper for messages from The Things Network http integration.",
+    "authors": [
+        {
+            "name": "Florian Otto",
+            "email": "florian.otto@mindbird.de"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Mindbird\\TheThingsNetwork\\": "src/"
+        }
+    }
+}
