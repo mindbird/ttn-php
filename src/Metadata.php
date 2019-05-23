@@ -15,17 +15,17 @@ class Metadata
     protected $longitude;
     protected $altitude;
 
-    public function __construct(object $metadata)
+    public function __construct(array $metadata)
     {
-        $this->setTime($metadata->time);
-        $this->setFrequency($metadata->frequency);
-        $this->setModulation($metadata->modulation);
-        $this->setDataRate($metadata->data_rate);
-        $this->setBitRate($metadata->bit_rate);
-        $this->setCodingRate($metadata->coding_rate);
-        $this->setLatitude($metadata->latitude);
-        $this->setLongitude($metadata->longitude);
-        $this->setAltitude($metadata->altitude);
+        $this->setTime($metadata['time']);
+        $this->setFrequency($metadata['frequency']);
+        $this->setModulation($metadata['modulation']);
+        $this->setDataRate($metadata['data_rate']);
+        $this->setBitRate($metadata['bit_rate']);
+        $this->setCodingRate($metadata['coding_rate']);
+        $this->setLatitude($metadata['latitude']);
+        $this->setLongitude($metadata['longitude']);
+        $this->setAltitude($metadata['altitude']);
 
         if (is_array($metadata->gateways)) {
             foreach ($metadata->gateways as $gatewayRaw) {

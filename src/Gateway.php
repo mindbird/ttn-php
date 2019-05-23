@@ -17,16 +17,16 @@ class Gateway
 
     public function __construct(object $gateway)
     {
-        $this->setGatewayId($gateway->gtw_id);
-        $this->setTimestamp($gateway->timestamp);
-        $this->setTime($gateway->time);
-        $this->setChannel($gateway->channel);
-        $this->setRssi($gateway->rssi);
-        $this->setSnr($gateway->snr);
-        $this->setRfChain($gateway->rf_chain);
-        $this->setLatitude($gateway->latitude);
-        $this->setLongitude($gateway->longitude);
-        $this->setAltitude($gateway->altitude);
+        $this->setGatewayId($gateway['gtw_id']);
+        $this->setTimestamp($gateway['timestamp']);
+        $this->setTime($gateway['time']);
+        $this->setChannel($gateway['channel']);
+        $this->setRssi($gateway['rssi']);
+        $this->setSnr($gateway['snr']);
+        $this->setRfChain($gateway['rf_chain']);
+        $this->setLatitude($gateway['latitude']);
+        $this->setLongitude($gateway['longitude']);
+        $this->setAltitude($gateway['altitude']);
     }
 
     /**

@@ -19,20 +19,20 @@ protected $downlinkUrl;
 
     public function __construct(string $json)
     {
-        $messageRaw = json_decode($json);
+        $messageRaw = json_decode($json, true);
 
-        $this->setAppId($messageRaw->app_id);
-        $this->setDevId($messageRaw->dev_id);
-        $this->setHardwareSerial($messageRaw->hardware_serial);
-        $this->setPort($messageRaw->port);
-        $this->setCounter($messageRaw->counter);
-        $this->setIsRetry($messageRaw->is_retry);
-        $this->setConfirmed($messageRaw->confirmed);
-        $this->setPayloadRaw($messageRaw->payload_raw);
-        $this->setPayloadFields($messageRaw->payload_fields);
-        $this->setDownlinkUrl($messageRaw->downlink_url);
+        $this->setAppId($messageRaw['app_id']);
+        $this->setDevId($messageRaw['dev_id']);
+        $this->setHardwareSerial($messageRaw['hardware_serial']);
+        $this->setPort($messageRaw['port']);
+        $this->setCounter($messageRaw['counter']);
+        $this->setIsRetry($messageRaw['is_retry']);
+        $this->setConfirmed($messageRaw['confirmed']);
+        $this->setPayloadRaw($messageRaw['payload_raw']);
+        $this->setPayloadFields($messageRaw['payload_fields']);
+        $this->setDownlinkUrl($messageRaw['downlink_url']);
 
-        $metadata = new Metadata($messageRaw->metadata);
+        $metadata = new Metadata($messageRaw['metadata']);
         $this->setMetadata($metadata);
         var_dump($this);
     }
