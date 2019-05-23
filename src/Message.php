@@ -34,7 +34,6 @@ protected $downlinkUrl;
 
         $metadata = new Metadata($messageRaw['metadata']);
         $this->setMetadata($metadata);
-        var_dump($this);
     }
 
     /**
