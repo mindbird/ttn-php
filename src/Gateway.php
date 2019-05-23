@@ -15,7 +15,7 @@ class Gateway
     protected $longitude;
     protected $altitude;
 
-    public function __construct(object $gateway)
+    public function __construct(array $gateway)
     {
         $this->setGatewayId($gateway['gtw_id']);
         $this->setTimestamp($gateway['timestamp']);
